@@ -1,0 +1,9 @@
+node_modules/
+src/pages/**/*
+!src/pages/*.js
+public
+.gatsby-context.js
+.DS_Store
+.intermediate-representation/
+.cache/
+.npmrc

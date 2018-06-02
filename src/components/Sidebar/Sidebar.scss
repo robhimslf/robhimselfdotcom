@@ -1,0 +1,170 @@
+/* blue: #039be5 red: #c62641 */
+.rh-sidebar {
+    background: #fff;
+    width: 407px;
+    height: 100%;
+    position: fixed;
+    padding: 160px 0 0;
+    top: 0;
+    right: 0;
+    display: block;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 9999;
+    -webkit-transform: translate3D(437px,0,0);
+    -ms-transform: translate3D(437px,0,0);
+    transform: translate3D(437px,0,0);
+    -webkit-transition: visibility 1ms linear .2s,-webkit-transform .2s ease;
+    transition: visibility 1ms linear .2s,-webkit-transform .2s ease;
+    transition: transform .2s ease,visibility 1ms linear .2s;
+    transition: transform .2s ease,visibility 1ms linear .2s,-webkit-transform .2s ease;
+
+    .sidebar-header {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        height: 110px;
+        top: 0;
+        padding: 0;
+        background: #c62641;
+    }
+
+    .sidebar-header-wrapper {
+        max-width: 300px;
+        margin-right: auto;
+        margin-left: auto;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .site-title {
+        position: relative;
+        display: block;
+        top: 0;
+        background-image: url(/assets/img/img_rh-logo.png);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        width: 44px;
+        height: 44px;
+        text-indent: -999999px;
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .sidebar-close {
+        font-size: 2.5rem;
+        padding: 10px;
+        cursor: pointer;
+        color: #FFF;
+        opacity: .5;
+        transition: all .2s ease-in-out;
+        position: relative;
+        right: -10px;
+    }
+
+    .sidebar-menu {
+        .rh-nav {
+            li {
+                padding-left: 0;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid rgba( 0, 0, 0, 0.1 );
+                }
+            }
+
+            a {
+                display: block;
+                padding-bottom: 12px;
+                text-transform: none;
+            }
+        }
+    }
+
+    .sidebar-author {
+        p {
+            margin: 0 0 1.8rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.rh-sidebar-overlay {
+    width: 100%;
+    height: 100%;
+    height: -webkit-calc(160%);
+    height: calc(160%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9998;
+    background: rgba(0,0,0,.6);
+    content: '';
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    -webkit-transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -ms-transition: opacity .25s ease-in-out;
+    -o-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+}
+
+.rh-sidebar-show {
+    .rh-sidebar {
+        -webkit-transform: translate3D(0,0,0);
+        -ms-transform: translate3D(0,0,0);
+        transform: translate3D(0,0,0);
+        -webkit-box-shadow: 0 0 100px rgba(0,0,0,.5);
+        box-shadow: 0 0 100px rgba(0,0,0,.5);
+    }
+
+    .rh-sidebar-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.accent-red .rh-sidebar .sidebar-header {
+    background: #c62641;
+}
+
+@media ( max-width: 480px ) {
+    .rh-sidebar {
+        max-width: 320px;
+        padding: 100px 40px 40px;
+    }
+
+    .rh-sidebar .sidebar-header {
+        height: 75px;
+        padding: 0 40px;
+    }
+}
+
+@media only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+    .rh-sidebar .site-title {
+        background-image: url(/assets/img/img_rh-logo@2x.png);
+        background-size: 44px 44px;
+    }
+}

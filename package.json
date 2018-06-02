@@ -1,0 +1,74 @@
+{
+    "name": "robhimselfdotcom",
+    "version": "1.0.0",
+    "description": "The source code to my GatsbyJS-based blog using React, Markdown, Sass, and GraphQL.",
+    "scripts": {
+        "generate-post": "babel-node util/generate_post.js",
+        "build": "gatsby build",
+        "serve": "gatsby serve",
+        "dev": "gatsby develop",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/robhimslf/robhimselfdotcom.git"
+    },
+    "keywords": [
+        "GatsbyJS",
+        "React",
+        "Sass",
+        "GraphQL",
+        "FontAwesome",
+        "Markdown",
+        "blog",
+        "responsive"
+    ],
+    "author": "Rob Himself <rob@robhimself.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/robhimslf/robhimselfdotcom/issues"
+    },
+    "homepage": "https://github.com/robhimslf/robhimselfdotcom#readme",
+    "dependencies": {
+        "@fortawesome/fontawesome": "^1.1.8",
+        "@fortawesome/fontawesome-free-brands": "^5.0.13",
+        "@fortawesome/fontawesome-pro-regular": "^5.0.13",
+        "@fortawesome/fontawesome-pro-solid": "^5.0.13",
+        "@fortawesome/react-fontawesome": "0.0.20",
+        "lodash": "^4.15.0",
+        "moment": "^2.22.1",
+        "normalize.css": "^8.0.0",
+        "prop-types": "^15.6.1",
+        "react-moment": "^0.7.0",
+        "react-scroll": "^1.7.9",
+        "react-transition-group": "^2.3.1",
+        "reading-time": "^1.1.2",
+        "underscore.string": "^3.3.4"
+    },
+    "devDependencies": {
+        "app-module-path": "^2.2.0",
+        "feed": "^1.1.1",
+        "front-matter": "^2.3.0",
+        "gatsby": "^1.9.269",
+        "gatsby-link": "^1.6.8",
+        "gatsby-plugin-google-analytics": "^1.0.4",
+        "gatsby-plugin-manifest": "^1.0.4",
+        "gatsby-plugin-offline": "^1.0.4",
+        "gatsby-plugin-preact": "^1.0.3",
+        "gatsby-plugin-react-helmet": "^1.0.3",
+        "gatsby-plugin-sass": "^1.0.26",
+        "gatsby-plugin-sharp": "^1.6.2",
+        "gatsby-remark-copy-linked-files": "^1.5.2",
+        "gatsby-remark-external-links": "0.0.4",
+        "gatsby-remark-images": "^1.5.4",
+        "gatsby-remark-prismjs": "^1.2.1",
+        "gatsby-remark-responsive-iframe": "^1.4.3",
+        "gatsby-remark-smartypants": "^1.4.3",
+        "gatsby-source-filesystem": "^1.4.3",
+        "gatsby-transformer-remark": "^1.7.1",
+        "gatsby-transformer-sharp": "^1.6.1",
+        "invariant": "^2.2.4",
+        "markdown-it": "^8.4.1",
+        "prettier": "^1.6.1"
+    }
+}

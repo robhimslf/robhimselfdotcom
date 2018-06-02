@@ -1,0 +1,171 @@
+@import '../../vars';
+
+.rh-header {
+    position: fixed;
+    width: 100%;
+    height: 110px;
+    top: 0;
+    left: 0;
+    z-index: 9001;
+    will-change: scroll-position;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
+    .col-lg-12,
+    .container {
+        height: 100%;
+        position: relative;
+    }
+
+    .branding {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        height: 100%;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+
+        h1, h3 {
+            background-image: url(/assets/img/img_rh-logo.png);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            width: 44px;
+            height: 44px;
+            text-indent: -999999px;
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .rh-nav {
+        font-family: 'Josefin Sans';
+        font-weight: 600;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 0;
+        color: #fff;
+
+        > li {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1.3;
+            min-height: 4rem;
+            padding: 0;
+            position: relative;
+
+            > a {
+                color: #fff;
+            }
+
+            &:hover {
+                > span {
+                    background: rgba(255,255,255,.1);
+                    -webkit-box-shadow: 0 10px 15px 0 rgba(0,0,0,.15);
+                    box-shadow: 0 10px 15px 0 rgba(0,0,0,.15);
+                }
+            }
+        }
+
+        a, span {
+            display: block;
+            -webkit-transition: all .1s ease-in-out;
+            -moz-transition: all .1s ease-in-out;
+            -ms-transition: all .1s ease-in-out;
+            -o-transition: all .1s ease-in-out;
+            transition: all .1s ease-in-out;
+            -webkit-backface-visibility: hidden;
+        }
+
+        span {
+            padding: 13px 14px;
+            line-height: 1.3;
+            cursor: pointer;
+            
+            svg {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+.rh-pre-sticky-elems {
+    .rh-header {
+        height: 70px;
+        top: -70px;
+    }
+}
+
+.rh-sticky-elems {
+    .rh-header {
+        top: 0;
+        background: $accent-red;
+        z-index: 9001;
+    }
+}
+
+@media(max-width: 1260px) {
+    .rh-header {
+        .container {
+            max-width: 93%;
+        }
+    }
+}
+
+@media(max-width: 800px) {
+    .rh-header {
+        .container {
+            max-width: 90%;
+        }
+    }
+}
+
+@media(max-width: 680px) {
+    .rh-header {
+        max-height: 75px;
+        min-height: 75px;
+        height: 75px;
+    }
+}
+
+@media(max-width: 620px) {
+    .rh-header {
+        li.rh-action-btn,
+        li.rh-actions-btn {
+            width: 4rem;
+        }
+    }
+}
+
+@media(max-width: 480px) {
+    .rh-header {
+        max-height: 70px;
+
+        .container {
+            max-width: 83%;
+        }
+    }
+}
+
+@media only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+    .rh-header .branding h1,
+    .rh-header .branding h3 {
+        background-image: url(/assets/img/img_rh-logo@2x.png);
+        background-size: 44px 44px;
+    }
+}
